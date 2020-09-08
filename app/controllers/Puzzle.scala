@@ -155,7 +155,7 @@ final class Puzzle(
                         puzzle = puzzle,
                         user = me,
                         result = Result(resultInt == 1),
-                        mobile = lila.api.Mobile.Api.requested(ctx.req),
+                        mobile = false,
                         isStudent = isStudent
                       )
                       me2   <- if (mode.rated) env.user.repo byId me.id map (_ | me) else fuccess(me)
